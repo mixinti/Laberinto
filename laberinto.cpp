@@ -1,8 +1,8 @@
 #include <stdio.h>      // Librería para usar printf (salida en consola)
-#include <stdlib.h>     // Librería para convertir texto a número
+#include <stdlib.h>     // Librería para convertir texto a número (atoi)
 #include <vector>       // Estructura dinámica tipo matriz
 #include <queue>        // Cola para BFS
-#include <algorithm>    // Para usar shuffle
+#include <algorithm>    // Para usar shuffle 
 #include <random>       // Generador de números aleatorios 
 #include <chrono>       // Para medir tiempo de ejecución
 
@@ -23,7 +23,7 @@ bool valido(int x, int y) {
     return x >= 0 && y >= 0 && x < N && y < N;
 }
 
-/*GENERACIÓN DEL LABERINTO - DFS RECURSIVO*/
+/*GENERACIÓN DEL LABERINTO - DFS*/
 
 // Función recursiva que crea caminos usando Backtracking
 void dfs(int x, int y, mt19937 &gen) {
@@ -178,4 +178,5 @@ int main(int argc, char* argv[]) {
     printf("\nTiempo total: %f segundos\n", t.count());
 
     return 0;  
+
 }
